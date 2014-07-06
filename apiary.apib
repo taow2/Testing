@@ -4,49 +4,49 @@ HOST: http://www.google.com
 # IDB1
 Notes API is a *short texts saving* service similar to its physical paper presence on your table.
 
-# Group Notes
+# Group hashtags
 Notes related resources of the **Notes API**
 
-## Notes Collection [/notes]
+## HashTags Collection [/hashtags]
 ### List all Notes [GET]
 + Response 200 (application/json)
 
         [{
-          "id": 1, "title": "Jogging in park"
+          "id": 1, "name": "Heats Spurs"
         }, {
-          "id": 2, "title": "Pick-up posters from post-office"
+          "id": 2, "name": "WorldCup"
         }]
 
 ### Create a Note [POST]
 + Request (application/json)
 
-        { "title": "Buy cheese and bread for breakfast." }
+        { "name": "NoMoreSports" }
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Buy cheese and bread for breakfast." }
+        { "id": 3, "name": "NoMoreSports" }
         
 
 
-## Note [/notes/{id}]
+## HashTag [/hashtags/{id}]
 A single Note object with all its details
 
 + Parameters
     + id (required, number, `1`) ... Numeric `id` of the Note to perform action with. Has example value.
 
 
-### Update a Note [PUT]
+### Update a Hashtag [PUT]
 + Request (application/json)
 
-        { "title": "Sleep." }
+        { "title": "VideoGames" }
 
 + Response 201 (application/json)
 
-        { "id": 3, "title": "Sleep." }
+        { "id": 3, "title": "VideoGames" }
         
 
 
-### Retrieve a Note [GET]
+### Retrieve a Hashtag [GET]
 + Response 200 (application/json)
 
     + Header
@@ -55,7 +55,7 @@ A single Note object with all its details
 
     + Body
 
-            { "id": 2, "title": "Pick-up posters from post-office" }
+            { "id": 2, "name":"WorldCup" }
 
 ### Remove a Note [DELETE]
 + Response 204

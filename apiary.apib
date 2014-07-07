@@ -4,6 +4,31 @@ HOST: http://www.google.com
 # IDB1
 Notes API is a *short texts saving* service similar to its physical paper presence on your table.
 
+# Group handles
+Notes related resources of the **Notes API**
+
+## Handle Collection [/handle]
+### List all Notes [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 1, "name": "Jack"
+        }, {
+          "id": 2, "name": "Bill"
+        }]
+
+### Create a Note [POST]
++ Request (application/json)
+
+        { "name": "Sam" }
+
++ Response 201 (application/json)
+
+        { "id": 3, "name": "Sam" }
+        
+
+
+
 # Group hashtags
 Notes related resources of the **Notes API**
 
